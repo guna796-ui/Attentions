@@ -17,6 +17,6 @@ services:
     name: prezinko-frontend
     env: static
     buildCommand: "npm install && npm run build"
-    staticPublishPath: "build"
+    staticPublishPath: "dist"   # ✅ Vite outputs to "dist"
     rootDir: frontend
     autoDeploy: true
