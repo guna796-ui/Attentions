@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Storage & Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔄 Clear Session</h1>
+        <p class="message">Click the button below to clear your session and redirect to login</p>
+        <button onclick="clearAndRedirect()">Clear Session & Login</button>
+    </div>
+
+    <script>
+        function clearAndRedirect() {
+            // Clear all localStorage
+            localStorage.clear();
+
+            // Clear all sessionStorage
+            sessionStorage.clear();
+
+            // Show success message
+            alert('Session cleared! Redirecting to login...');
+
+            // Redirect to login page
+            window.location.href = '/login';
+        }
+
+        // Auto-clear if URL has ?auto parameter
+        if (window.location.search.includes('auto')) {
+            clearAndRedirect();
+        }
+    </script>
+</body>
+
+</html>

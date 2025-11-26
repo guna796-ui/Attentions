@@ -1,0 +1,36 @@
+{
+    "name": "Prezinko - Attendance & Leave Management",
+    "short_name": "Prezinko",
+    "description": "Prezinko - Print. Gift. Delight. Employee attendance and leave management system.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4f46e5",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "productivity"
+    ],
+    "shortcuts": [
+        {
+            "name": "Punch In/Out",
+            "short_name": "Punch",
+            "description": "Quick access to punch in or out",
+            "url": "/employee"
+        },
+        {
+            "name": "Apply Leave",
+            "short_name": "Leave",
+            "description": "Apply for leave",
+            "url": "/employee/leave"
+        }
+    ]
+}
